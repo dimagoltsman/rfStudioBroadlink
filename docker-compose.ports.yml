@@ -1,0 +1,8 @@
+# Override for hosts without host networking: publishes the UI on 8333 through NAT.
+# Broadcast discovery does not work this way; add the Broadlink by IP in the Radios tab.
+#   docker compose -f docker-compose.yml -f docker-compose.ports.yml up -d
+services:
+  rf-workbench:
+    network_mode: bridge
+    ports:
+      - "8333:8333"

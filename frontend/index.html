@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RF Workbench</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-sig" aria-hidden="true"></span>
+    <div>
+      <h1>RF Workbench</h1>
+      <p>Broadlink · 433 / 315 MHz remote pairing &amp; control</p>
+    </div>
+  </div>
+  <label class="device-pick">
+    <span>Active radio</span>
+    <select id="active-device"></select>
+    <i id="device-dot" class="dot"></i>
+  </label>
+</header>
+
+<nav class="rail" id="rail">
+  <button data-tab="remotes" class="active"><b>01</b>Remotes</button>
+  <button data-tab="learn"><b>02</b>Learn</button>
+  <button data-tab="codes"><b>03</b>Codes</button>
+  <button data-tab="devices"><b>04</b>Radios</button>
+  <button data-tab="protocols"><b>05</b>Protocols</button>
+</nav>
+
+<main id="main"></main>
+<div id="toasts" class="toasts"></div>
+<div id="modal-root"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

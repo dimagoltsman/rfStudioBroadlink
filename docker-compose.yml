@@ -1,0 +1,12 @@
+services:
+  rf-workbench:
+    build: .
+    container_name: rf-workbench
+    # Host networking: needed for LAN broadcast discovery of Broadlink devices (UDP 80 broadcast).
+    # Linux / Raspberry Pi: works out of the box.
+    # Docker Desktop (macOS/Windows): enable Settings > Resources > Network > "Enable host networking" first,
+    # or use `docker compose -f docker-compose.yml -f docker-compose.ports.yml up -d` and add the device by IP.
+    network_mode: host
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
