@@ -1,7 +1,9 @@
+# live store: devices, learned codes and rolling-code counters
+data/
+.venv/
 __pycache__/
 *.pyc
 .pytest_cache/
-.venv/
-data/*.json
-.claude
-.idea
+.claude/
+.idea/
+.DS_Store
